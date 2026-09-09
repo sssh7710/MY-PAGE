@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>송선호 — 소프트웨어 개발자</title>
+  <meta name="description" content="말보다 코드로, 일단 만들고 고치는 소프트웨어 개발자 송선호입니다." />
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.setAttribute("data-lang", localStorage.getItem("lang") || "ko");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="intro.css" />
+</head>
+<body>
+  <div class="progress-bar" aria-hidden="true"><span></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top">송선호</a>
+    <div class="header-end">
+      <button class="theme-toggle" type="button" aria-label="다크 모드로 바꾸기">
+        <span class="theme-toggle-sun" data-i18n="theme.light">라이트 모드</span>
+        <span class="theme-toggle-moon" data-i18n="theme.dark">다크 모드</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="#motive" data-i18n="nav.motive">소개</a>
+        <a href="#traits" data-i18n="nav.traits">장단점</a>
+        <a href="#motto" data-i18n="nav.motto">신조</a>
+        <a href="#skills" data-i18n="nav.skills">기술</a>
+        <a href="#works" data-i18n="nav.works">작품</a>
+        <a href="#licenses" data-i18n="nav.licenses">면허</a>
+        <a href="#vision" data-i18n="nav.vision">포부</a>
+        <a href="#contact" data-i18n="nav.contact">연락</a>
+        <a href="#guest" data-i18n="nav.guest">방명록</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker" data-i18n="hero.kicker">송선호 · 한라대학교 IT소프트웨어공학과 재학</p>
+          <h1>
+            <span data-i18n="hero.line1">일단 만들고,</span>
+            <span data-i18n="hero.line2">고친다</span>
+          </h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            말보다 손으로. 막히면 뜯어보고, 돌아가게 만드는 개발자입니다.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#motive" data-i18n="hero.about">소개 보기</a>
+            <a class="btn btn-ghost" href="#skills" data-i18n="hero.skills">기술 보기</a>
+          </div>
+        </div>
+        <figure class="profile-photo">
+          <img src="profile.png?v=2" alt="송선호 프로필 사진" />
+          <figcaption class="profile-fallback">
+            <span>송</span>
+            <small data-i18n="photo.hint">profile.png 를 이 폴더에 넣으면 사진이 바뀝니다</small>
+          </figcaption>
+        </figure>
+      </div>
+      <ul class="hero-meta" aria-label="핵심 이력">
+        <li><strong>ISTP</strong><span data-i18n="meta.mbtiLabel">MBTI</span></li>
+        <li><strong>Google</strong><span data-i18n="meta.companyLabel">지원</span></li>
+        <li><strong>3</strong><span data-i18n="meta.licenseLabel">보유 면허</span></li>
+      </ul>
+    </section>
+
+    <section id="motive" class="section motive">
+      <div class="container split">
+        <div class="section-head">
+          <p class="eyebrow">01 — Motive</p>
+          <h2 data-i18n="motive.title">지원 동기</h2>
+        </div>
+        <div class="prose reveal">
+          <p data-i18n="motive.p1">
+            지금은 한라대학교 IT소프트웨어공학과에 재학 중입니다.
+            강의보다 직접 붙여 보고, 깨지고, 고치는 쪽이 더 잘 맞습니다.
+            새 기술도 소개글보다 레포를 클론해서 만져 볼 때 이해가 됩니다.
+          </p>
+          <p data-i18n="motive.p2">
+            구글은 검색이든 클라우드든, 실제로 전 세계가 매일 두드리는 큰 기계를 굴리는 곳이라고 봤습니다.
+            규모 있는 시스템이 어디서 병목이 나고 어떻게 버티는지, 그 안을 직접 만져 보고 싶어 지원했습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="traits" class="section traits">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">02 — Character</p>
+          <h2 data-i18n="traits.title">성격의 장단점</h2>
+          <p class="section-lead" data-i18n="traits.lead">MBTI는 ISTP입니다. 말은 짧게, 손은 빠르게 움직이는 편입니다.</p>
+        </div>
+
+        <div class="trait-grid">
+          <article class="trait-card trait-card--mbti reveal">
+            <p class="trait-label">MBTI</p>
+            <h3>ISTP</h3>
+            <p data-i18n="traits.mbti">회의보다 로그를 먼저 엽니다. 원인을 쪼개 보고, 직접 재현하고, 고쳐서 확인해야 직성이 풀립니다.</p>
+          </article>
+          <article class="trait-card reveal">
+            <p class="trait-label" data-i18n="traits.plus">장점</p>
+            <h3 data-i18n="traits.t1">손으로 익힌다</h3>
+            <p data-i18n="traits.d1">문서를 오래 읽기보다 샘플을 띄우고 깨뜨려 봅니다. 사이드 프로젝트도 이론 정리보다 일단 돌아가는 것부터 만듭니다.</p>
+          </article>
+          <article class="trait-card reveal">
+            <p class="trait-label" data-i18n="traits.plus">장점</p>
+            <h3 data-i18n="traits.t2">위기에서 침착함</h3>
+            <p data-i18n="traits.d2">과제나 팀 프로젝트에서 버그가 나와도 감정부터 쓰지 않습니다. 재현 → 원인 → 패치 순으로 일을 자릅니다.</p>
+          </article>
+          <article class="trait-card reveal">
+            <p class="trait-label" data-i18n="traits.plus">장점</p>
+            <h3 data-i18n="traits.t3">필요한 말만</h3>
+            <p data-i18n="traits.d3">긴 설명보다 재현 방법, 원인, 고친 점을 짧게 남깁니다. 팀 과제에서는 결과물이 먼저 나오는 쪽을 선호합니다.</p>
+          </article>
+          <article class="trait-card trait-card--note reveal">
+            <p class="trait-label" data-i18n="traits.minus">단점 · 개선 중</p>
+            <h3 data-i18n="traits.t4">혼자 고치다 늦음</h3>
+            <p data-i18n="traits.d4">막히면 먼저 혼자 파고들다가 공유가 늦어질 때가 있습니다. 지금은 막힌 지점과 시도한 것을 중간에 짧게 남기려 합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="motto" class="section motto">
+      <div class="motto-shift">
+        <div class="container motto-inner reveal">
+        <p class="eyebrow">03 — Motto</p>
+        <blockquote>
+          <p data-i18n="motto.quote">일단 만들고, 고친다</p>
+        </blockquote>
+        <p class="motto-body" data-i18n="motto.body">
+          완벽한 설계를 오래 그리는 것보다, 돌아가는 것을 먼저 두고 깨진 부분을 고치는 쪽이 맞습니다.
+          쓰지 않는 기술, 재현되지 않는 이론은 제게 의미가 없습니다. 손으로 확인한 것만 믿습니다.
+        </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">04 — Stack</p>
+          <h2 data-i18n="skills.title">쓰는 기술</h2>
+          <p class="section-lead" data-i18n="skills.lead">소개글보다, 실제로 손댄 것들입니다.</p>
+        </div>
+        <ul class="skill-grid">
+          <li class="reveal">
+            <p class="card-num">01</p>
+            <div class="skill-top"><strong>HTML</strong><b class="skill-num" data-count="70">0%</b></div>
+            <span class="skill-note" data-i18n="skill.html">화면 뼈대</span>
+            <div class="skill-bar" style="--level: 70%" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><i></i></div>
+          </li>
+          <li class="reveal">
+            <p class="card-num">02</p>
+            <div class="skill-top"><strong>CSS</strong><b class="skill-num" data-count="65">0%</b></div>
+            <span class="skill-note" data-i18n="skill.css">레이아웃·반응형</span>
+            <div class="skill-bar" style="--level: 65%" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"><i></i></div>
+          </li>
+          <li class="reveal">
+            <p class="card-num">03</p>
+            <div class="skill-top"><strong>JavaScript</strong><b class="skill-num" data-count="55">0%</b></div>
+            <span class="skill-note" data-i18n="skill.js">동작·검증</span>
+            <div class="skill-bar" style="--level: 55%" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><i></i></div>
+          </li>
+          <li class="reveal">
+            <p class="card-num">04</p>
+            <div class="skill-top"><strong>React Native</strong><b class="skill-num" data-count="40">0%</b></div>
+            <span class="skill-note" data-i18n="skill.rn">모바일 앱</span>
+            <div class="skill-bar" style="--level: 40%" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><i></i></div>
+          </li>
+          <li class="reveal">
+            <p class="card-num">05</p>
+            <div class="skill-top"><strong>REST API</strong><b class="skill-num" data-count="45">0%</b></div>
+            <span class="skill-note" data-i18n="skill.api">백엔드 연동</span>
+            <div class="skill-bar" style="--level: 45%" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="45"><i></i></div>
+          </li>
+          <li class="reveal">
+            <p class="card-num">06</p>
+            <div class="skill-top"><strong>Git</strong><b class="skill-num" data-count="50">0%</b></div>
+            <span class="skill-note" data-i18n="skill.git">버전 관리</span>
+            <div class="skill-bar" style="--level: 50%" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i></i></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="works" class="section works">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">05 — Work</p>
+          <h2 data-i18n="works.title">만든 것</h2>
+          <p class="section-lead" data-i18n="works.lead">아직 많지는 않습니다. 지금 보고 있는 이 페이지부터입니다.</p>
+        </div>
+        <ul class="work-grid">
+          <li class="reveal">
+            <p class="card-num">01</p>
+            <p class="work-meta" data-i18n="works.a.meta">개인 · 2026</p>
+            <h3 data-i18n="works.a.name">자기소개 페이지</h3>
+            <p data-i18n="works.a.body">HTML, CSS, JavaScript로 직접 만든 소개 페이지입니다. 다크 모드, 한/영, 방명록까지 붙여 가며 깨지는 부분을 고쳤습니다.</p>
+            <p class="work-tags">HTML · CSS · JS</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="licenses" class="section licenses">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">06 — License</p>
+          <h2 data-i18n="licenses.title">보유 면허</h2>
+          <p class="section-lead" data-i18n="licenses.lead">가지고 있는 자격과 면허입니다.</p>
+        </div>
+        <ul class="license-grid">
+          <li class="reveal">
+            <p class="card-num">01</p>
+            <p class="license-label" data-i18n="licenses.a.slot">자격</p>
+            <h3 data-i18n="licenses.a.name">항공전자정비기능사</h3>
+            <p data-i18n="licenses.a.meta">국가기술자격</p>
+          </li>
+          <li class="reveal">
+            <p class="card-num">02</p>
+            <p class="license-label" data-i18n="licenses.b.slot">항공</p>
+            <h3 data-i18n="licenses.b.name">초경량비행장치 무인멀티콥터</h3>
+            <p data-i18n="licenses.b.meta">1종</p>
+          </li>
+          <li class="reveal">
+            <p class="card-num">03</p>
+            <p class="license-label" data-i18n="licenses.c.slot">운전</p>
+            <h3 data-i18n="licenses.c.name">1종 보통</h3>
+            <p data-i18n="licenses.c.meta">자동차 운전면허</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="vision" class="section vision">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">07 — Vision</p>
+          <h2 data-i18n="vision.title">입사 후 포부</h2>
+          <p class="section-lead" data-i18n="vision.lead">거창한 비전보다, 맡은 코드가 실제로 돌아가게 만드는 사람이 되겠습니다.</p>
+        </div>
+
+        <ul class="vision-list">
+          <li class="reveal">
+            <span data-i18n="vision.l1">적응</span>
+            <div>
+              <h3 data-i18n="vision.h1">코드부터 연다</h3>
+              <p data-i18n="vision.p1">구글의 레포와 컨벤션을 빨리 익히고, 작은 버그·테스트부터 손대서 팀에 쓸모 있는 커밋을 남기겠습니다.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span data-i18n="vision.l2">단기</span>
+            <div>
+              <h3 data-i18n="vision.h2">재현하고 고친다</h3>
+              <p data-i18n="vision.p2">제품이 어디서 깨지는지 직접 따라가며, 장애와 성능 이슈를 조용히 처리하는 쪽으로 실력을 쌓겠습니다.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span data-i18n="vision.l3">중장기</span>
+            <div>
+              <h3 data-i18n="vision.h3">큰 기계를 만진다</h3>
+              <p data-i18n="vision.p3">클라우드와 분산 시스템이 실제로 어떻게 버티는지 파고들어, 규모가 커져도 안 죽는 부분을 책임지고 싶습니다.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span data-i18n="vision.l4">궁극</span>
+            <div>
+              <h3 data-i18n="vision.h4">돌아가는 사람으로 남기</h3>
+              <p data-i18n="vision.p4">이름보다 결과가 먼저 나오는 개발자가 되고, 전 세계가 쓰는 서비스가 안 멈추게 만드는 쪽에 서고 싶습니다.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container split">
+        <div class="section-head">
+          <p class="eyebrow">08 — Contact</p>
+          <h2 data-i18n="contact.title">연락</h2>
+          <p class="section-lead" data-i18n="contact.lead">메일이나 GitHub로 짧게 남겨 주세요. 말보다 이슈와 코드가 편합니다.</p>
+        </div>
+        <ul class="contact-list">
+          <li class="reveal">
+            <span data-i18n="contact.email">이메일</span>
+            <a href="mailto:sssh7710@gmail.com">sssh7710@gmail.com</a>
+          </li>
+          <li class="reveal">
+            <span>GitHub</span>
+            <a href="https://github.com/sssh7710" target="_blank" rel="noopener noreferrer">github.com/sssh7710</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="guest" class="section guest">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">09 — Guestbook</p>
+          <h2 data-i18n="guest.title">방명록</h2>
+          <p class="section-lead" data-i18n="guest.lead">짧은 한마디만 남겨 주세요. 이 브라우저에만 저장됩니다.</p>
+        </div>
+        <form class="guest-form" action="#">
+          <label>
+            <span data-i18n="guest.name">이름</span>
+            <input type="text" name="name" maxlength="20" required data-i18n-placeholder="guest.namePh" placeholder="이름" />
+          </label>
+          <label>
+            <span data-i18n="guest.msg">한마디</span>
+            <textarea name="message" rows="3" maxlength="200" required data-i18n-placeholder="guest.msgPh" placeholder="잘 보고 갑니다."></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit" data-i18n="guest.submit">남기기</button>
+        </form>
+        <ul class="guest-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="logo">송선호</p>
+      <div class="footer-tools">
+        <button class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+        <button class="print-btn" type="button" data-i18n="print">인쇄</button>
+      </div>
+      <p data-i18n="footer">일단 만들고, 고친다 · 2026</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" data-i18n="top">맨 위로</a>
+
+  <script src="intro.js"></script>
+</body>
+</html>
