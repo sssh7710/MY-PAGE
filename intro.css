@@ -251,53 +251,6 @@ a {
   background: var(--paper);
 }
 
-.vibe {
-  background: var(--paper-deep);
-}
-
-.vibe-grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.15rem;
-}
-
-.vibe-grid li {
-  max-width: 36rem;
-  padding: 1.8rem 1.6rem 1.7rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper);
-}
-
-.vibe-grid h3 a,
-.vibe-link {
-  border-bottom: 1px solid transparent;
-}
-
-.vibe-grid h3 a:hover,
-.vibe-link:hover {
-  border-bottom-color: var(--accent);
-}
-
-.vibe-link {
-  color: var(--accent);
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.vibe-grid h3 {
-  margin: 0 0 0.65rem;
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-}
-
-.vibe-grid p {
-  margin: 0;
-}
-
 .work-grid {
   list-style: none;
   margin: 0;
@@ -338,6 +291,22 @@ a {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--ink) !important;
+}
+
+.work-grid h3 a,
+.work-link {
+  border-bottom: 1px solid transparent;
+}
+
+.work-grid h3 a:hover,
+.work-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+.work-link {
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .guest {
@@ -1111,8 +1080,7 @@ a {
   .split,
   .skill-grid,
   .license-grid,
-  .work-grid,
-  .vibe-grid {
+  .work-grid {
     grid-template-columns: 1fr;
   }
 
