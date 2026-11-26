@@ -68,6 +68,10 @@ const I18N = {
     "works.c.meta": "개인 · 2026",
     "works.c.name": "사과 게임",
     "works.c.body": "드래그해서 합이 10이 되는 사과를 지우는 숫자 퍼즐 게임입니다.",
+    "works.d.meta": "개인 · 2026",
+    "works.d.name": "PDF 편집기",
+    "works.d.body": "필요한 페이지만 추출하거나, 여러 PDF를 순서대로 하나로 합칠 수 있는 웹 도구입니다.",
+    "works.go": "이동 하기",
     "licenses.title": "보유 면허",
     "licenses.lead": "가지고 있는 자격과 면허입니다.",
     "licenses.a.slot": "자격",
@@ -176,6 +180,10 @@ const I18N = {
     "works.c.meta": "Personal · 2026",
     "works.c.name": "Apple game",
     "works.c.body": "A number puzzle: drag to clear apples that add up to 10.",
+    "works.d.meta": "Personal · 2026",
+    "works.d.name": "PDF editor",
+    "works.d.body": "A web tool to extract pages or merge multiple PDFs in order.",
+    "works.go": "Go",
     "licenses.title": "Licenses",
     "licenses.lead": "Certificates and licenses I hold.",
     "licenses.a.slot": "Certificate",
@@ -225,7 +233,6 @@ const langToggle = document.querySelector(".lang-toggle");
 const printBtn = document.querySelector(".print-btn");
 const toTop = document.querySelector(".to-top");
 const progressFill = document.querySelector(".progress-bar span");
-const cursorDot = document.querySelector(".cursor-dot");
 const mottoSection = document.querySelector(".motto");
 const mottoInner = document.querySelector(".motto-shift");
 const guestForm = document.querySelector(".guest-form");
@@ -233,7 +240,6 @@ const guestList = document.querySelector(".guest-list");
 const profilePhoto = document.querySelector(".profile-photo");
 const profileImage = profilePhoto?.querySelector("img");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const finePointer = window.matchMedia("(pointer: fine)").matches;
 const GUEST_KEY = "intro-guestbook";
 
 let typeTimer = 0;
@@ -485,28 +491,5 @@ guestForm.addEventListener("submit", (event) => {
   guestForm.reset();
   renderGuests();
 });
-
-if (finePointer && !reduceMotion && cursorDot) {
-  document.body.classList.add("has-cursor");
-  let x = window.innerWidth / 2;
-  let y = window.innerHeight / 2;
-  let cx = x;
-  let cy = y;
-  window.addEventListener(
-    "pointermove",
-    (event) => {
-      x = event.clientX;
-      y = event.clientY;
-    },
-    { passive: true }
-  );
-  const follow = () => {
-    cx += (x - cx) * 0.8;
-    cy += (y - cy) * 0.8;
-    cursorDot.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-    requestAnimationFrame(follow);
-  };
-  follow();
-}
 
 applyI18n();
